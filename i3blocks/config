@@ -1,0 +1,29 @@
+# i3blocks config file
+
+command=$SCRIPT_DIR/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+[memory]
+command=$SCRIPT_DIR/memory/memory
+interval=30
+
+[cpu_usage2]
+command=$SCRIPT_DIR/cpu_usage2/cpu_usage2
+markup=pango
+interval=persist
+min_width=CPU 100.00%
+
+[load_average]
+label=LOAD
+interval=10
+
+[song]
+command=dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:org.mpris.MediaPlayer2.Player string:Metadata | sed -n -e '/artist/{n;n;p}' -e '/title/{n;p}' | cut -d '"' -f 2 | paste -sd ': ' -
+label=Playing
+interval=5
+color=#8000FF
+
+[time]
+command=date '+%Y-%m-%d %H:%M:%S'
+interval=5
