@@ -228,5 +228,5 @@ bar {
 }
 
 exec_always xrandr --output HDMI-1 --mode 1920x1080 --rate 165
-exec_always feh --bg-scale "~/Downloads/bg3.jpg"
+exec_always feh --bg-scale "../images/bg3.jpg"
 exec_always --no-startup-id "picom --config ~/.config/picom/picom.conf"
