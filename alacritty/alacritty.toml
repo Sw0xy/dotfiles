@@ -1,5 +1,5 @@
 import = [
-    "~/.config/alacritty/themes/themes/thelovelace.toml"
+    "~/.config/alacritty/thelovelace.toml"
 ]
 
 [window]
